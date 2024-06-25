@@ -1,0 +1,25 @@
+<h3 style="text-align: center;">Add Tasks</h3>
+<form #form="ngForm" (ngSubmit)="onsubmit()"> 
+    <div class="mb-3">
+        <label class="form label">Task Name</label><br>
+        <input type="text" class="form-control" name="tname" #tname="ngModel" [(ngModel)]="data1.task_name" placeholder="Enter task name">
+    </div>
+    <div class="mb-3">
+        <label class="form label">Task Description</label><br>
+        <input type="text" class="form-control" name="desc" #tname="ngModel" [(ngModel)]="data1.task_desc" placeholder="Enter Task Description">
+    </div>
+    <div class="mb-3">
+        <label class="form label">Completed Status</label><br>
+        <select class="form-control" name="status" #status="ngModel" [(ngModel)]="data1.completed_status" >
+        <option value=True>Completed</option>
+        <option value=False>Not Completed</option></select>
+    </div>
+    <div class="mb-3">
+        <label class="form label">Date</label><br>
+        <input type="date" class="form-control" name="date" #tname="ngModel" [(ngModel)]="data1.date_added" placeholder="dd-mm-yyyy">
+    </div> 
+    <div class="mb-3">
+        <input type="submit" class="form-control">
+    </div>
+</form>    
+    
